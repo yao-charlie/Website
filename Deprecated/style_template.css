@@ -1,0 +1,89 @@
+/* Table of Contents */
+
+
+/*******
+Fonts
+*********/
+
+
+*,
+*::before,
+*::after{
+  box-sizing: :inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Crimson Text", serif;
+  color: var(--black)
+}
+
+
+/*******
+ General
+*********/
+
+:root {
+  --main-bg-color: white   /* #000050; */;
+  --sidebar-width: 200px;
+  --dropdown-bg-color: white   /* #000050; */;
+  --dropdown-nav-padding: 2px;
+}
+
+
+body,h1,h2,p,li,ul{
+
+}
+
+
+body{
+
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+ul{
+
+}
+
+a{
+
+}
+
+a:hover{
+
+}
+
+a:visited{
+
+}
+
+nav ul{
+
+}
+
+nav li{
+
+}
+
+
+
+/*******
+Navigation Bar
+*********/
+
+
+/*******
+Body
+*********/
+
+
+/*******
+ Specifics
+*********/

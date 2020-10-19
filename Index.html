@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>Charlie Yao</title>
+		<link href="style_sheet.css" rel="stylesheet" type="text/css"/>
+		<script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<header>
+			<div class= "container">
+
+			<h1 class="logo"> Charlie Yao </h1>
+			<button class="menu-toggle" role="button">
+
+				<div class="hamburger"></div>
+
+			</button>
+			<nav class="site-nav site-nav--closed">
+				<ul>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Professional</a></li>
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Projects</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+
+<!-- Introduction -->
+
+			<section class = "intro" id="home">
+				<h1 class="section__title section__title--intro">
+						Hello world! I'm <strong> Charlie Yao, P.Eng </strong>
+				</h1>
+				<p class="section__subtitle section__subtitle--intro"> Engineer, Artist, Problem Solver, Leader</p>
+				<p class="section__subtitle section__subtitle--subtext"> <em>...and reluctant self-promoter.</em></p>
+
+				<img class = "intro__img" src="img\emperor-tamarin.jpg" alt="Portrait"/>
+
+				<ul class = "intro__links">
+					<li class="intro__link">
+						<a class="intro__link" href="#">
+							<i class="fas fa-phone-square"></i>
+						</a>
+					</li>
+					<li class="intro__link">
+						<a class="intro__link" href="#">
+							<i class="fas fa-envelope-square"></i>
+						</a>
+					</li>
+				<!-- </ul>
+				<ul class="socialM-links"> -->
+					<li class="intro__socialM-links__item">
+						<a class="intro__socialM-links__item" href="https://www.linkedin.com/in/charlie-yao-38756723/" target="_blank">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+					<li class="intro__socialM-links__item">
+						<a class="intro__socialM-links__item" href="https://github.com/yao-charlie" target="_blank">
+							<i class="fab fa-github"></i>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+<!-- Characteristics -->
+			<section class = "character" id="character">
+				<h2 class = "section__title section__title--character"> How I add Value </h2>
+
+				<div class = "character_slides">
+					<div class = "character_slide">
+						<h3>Engineer</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class = "character_slide">
+						<h3>Artist</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class = "character_slide">
+						<h3>Problem Solver</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class = "character_slide">
+						<h3>Leader</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<a href="#character" class="btn">Projects</a>
+			</section>
+
+<!-- Skills -->
+			<section class = "skills" id="skills">
+				<h2 class="section__title section__title--skills"> Skills </h2>
+				<p class = "section__subtitle section__subtitle--skills">These are my skills</p>
+				<div class = "skills__body">
+
+
+ 					<!-- <p class = "skills__item"> Code </p>
+
+				  <p class = "skills__item"> Project Management </p>
+
+					<p class = "skills__item"> Business Development </p>
+
+				 	<p class = "skills__item"> Electrical Engineering</p>
+
+					<p class = "skills__item"> Proposals </p>
+
+					<p class = "skills__item"> Management </p> -->
+
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 1)">
+						<p>Leadership & Management</p>
+					</div>
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 2)">
+						<p>Project Management</p>
+					</div>
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 3)">
+						<p>Programming</p>
+					</div>
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 4)">
+						<p>Electrical Engineering</p>
+					</div>
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 5)">
+						<p>Business Development</p>
+					</div>
+					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 6)">
+						<p>Proposals & Marketting</p>
+					</div>
+
+
+					<div id = 'skills__content__lightbox' class = lightBox onclick="closeLBox('skills__content__lightbox')">
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Leadership & Management</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Project Management</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Programming</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Electrical Engineering</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Business Development</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "skills__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Proposals & Marketting</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+
+<!-- Projects -->
+			<section class = "projects" id="projects">
+				<h2 class="section__title section__title--projects"> Project Highlights </h2>
+				<!-- <p class = "section__subtitle section__subtitle--projects">Here are my projects</p> -->
+				<div class = "projects__body">
+
+					<!-- Project item 1 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=1" alt="" class="projects__img">
+					</a>
+
+					<!-- Project item 2 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=2" alt="" class="projects__img">
+					</a>
+
+					<!-- Project item 3 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=3" alt="" class="projects__img">
+					</a>
+
+					<!-- Project item 4 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=4" alt="" class="projects__img">
+					</a>
+
+					<!-- Project item 5 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=5" alt="" class="projects__img">
+					</a>
+
+					<!-- Project item 6 -->
+					<a href="#" class = "projects__item">
+						<img src="https://picsum.photos/400?random=6" alt="" class="projects__img">
+					</a>
+				</div>
+			</section>
+
+
+<!-- Experience -->
+			<section class = "experience" id="experience">
+				<h2 class="section__title section__title--experience"> Experience </h2>
+				<p class = "section__subtitle section__subtitle--experience">This is my experience</p>
+				<div class = "experience__body">
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 1)">
+						<div>
+							<img src="ext_logos\RJC.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Engineering Student</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 2)">
+						<div>
+							<img class="experience__img" id="Logo__UBC" src="ext_logos\UBC.png" alt="" >
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Research Assistant</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 3)">
+						<div>
+							<img src="ext_logos\MMMGroup.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>EIT, Project Lead,	Elec. Engineer </p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 4)">
+						<div>
+							<img src="ext_logos\WilliamsEngineering.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Electrical Engineer,	Team Lead</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 5)">
+						<div>
+							<img src="ext_logos\CYao.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Owner</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 6)">
+						<div>
+							<img src="ext_logos\Omicron.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Director, Engineering</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "experience__item" onclick="openLBox('experience__content__lightbox'); currentLBContent('experience__content__lightbox', 'experience__lightBox__container', 7)">
+						<div>
+							<img src="ext_logos\krahn.png" alt="" class="experience__img">
+						</div>
+						<div class="experience__subitem">
+							<div class="experience__subitem__text">
+								<p>Electrical Manager</p>
+							</div>
+						</div>
+					</div>
+
+					<div id = 'experience__content__lightbox' class = lightBox onclick="closeLBox('experience__content__lightbox')">
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Reed Jones Christoffersen, Consulting Engineers</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">University of British Columbia</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">MMM Group Ltd.</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Williams Engineering Canada</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">CYao Photography</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Omicron - Architectural, Engineering, Construction</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<p class ="lightBox__container__title">Krahn Group - KD Electrical Ltd.</p>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+		</main>
+
+<!-- Footer -->
+		<footer class="footer">
+
+			<ul class = "footer__links">
+				<li class="footer__link">
+					<a class="footer__link" href="#">
+						<i class="fas fa-phone-square"></i>
+					</a>
+				</li>
+				<li class="footer__link">
+					<a class="footer__link" href="#">
+						<i class="fas fa-envelope-square"></i>
+					</a>
+				</li>
+			<!-- </ul>
+
+			<ul class = "footer__socialM-links"> -->
+				<li class="footer__socialM-links__item">
+					<a class="footer__socialM-links__item" href="https://www.linkedin.com/in/charlie-yao-38756723/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</li>
+				<li class="footer__socialM-links__item">
+					<a class="footer__socialM-links__item" href="https://github.com/yao-charlie" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+				</li>
+
+
+
+			</ul>
+		</footer>
+		<script src="scripts\hamburger.js"></script>
+		<script src="scripts\lightbox.js"></script>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+
+
+/* Table of Contents */
+
+
+/*******
+Fonts
+*********/
+
+
+
+
+/*******
+ General
+*********/
+
+:root {
+  --main-bg-color: white   /* #000050; */;
+  --sidebar-width: 200px;
+  --dropdown-bg-color: white   /* #000050; */;
+  --dropdown-nav-padding: 2px;
+}
+
+
+body,h1,h2,p,li,ul{
+margin:0;
+padding:0;
+}
+
+
+body{
+	font-family:Arial,Helvetica,san-serif;
+	color:black;
+	background-color: var(--main-bg-color);
+}
+
+h1{
+	font-size: xlarge
+}
+
+h2{
+	font-size: large
+}
+
+ul{
+	list-style-type:square
+}
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+a:hover{
+	color:black /*var(--main-bg-color)*/;
+	background-color: white;
+}
+
+a:visited{
+
+}
+
+nav ul{
+	list-style-type:none;
+	padding-left: 20px;
+}
+
+nav li{
+	text-indent: none;
+	padding-bottom:2px;
+}
+
+
+
+/*******
+Navigation Bar
+*********/
+
+.sidebar {
+  height: 100%;
+  width: var(--sidebar-width);
+  color:black;
+  background-color: var(--main-bg-color);
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 10px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.sidebar a, .dropdown-btn {
+  text-decoration: none;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  padding-bottom: var(--dropdown-nav-padding);
+  padding-top: var(--dropdown-nav-padding);
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: var(--dropdown-bg-color);
+  padding-left: 10px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 0px;
+}
+
+.sidebar a {
+	padding-top: var(--dropdown-nav-padding);
+  padding-bottom: var(--dropdown-nav-padding);
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: large;
+}
+
+.sidebar a.active {
+  background-color: navyblue;
+  color: black;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: black;
+  color: var(--main-bg-color);
+}
+
+/*******
+Body
+*********/
+
+/* The value of the margin-left property should match the value of the sidebar's width property */
+div.main {
+  margin-left: var(--sidebar-width);
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+
+
+/*******
+ Specifics
+*********/
+
+#github_logo{
+  width:5%; min-width:25px; max-width:50px;
+  padding: 5px;
+  /* -webkit-filter: invert(1); */
+  filter: invert(1);
+}
+
+
+
+/**/
+
+
+.external_logos{
+	width:5%; min-width:25px; max-width:50px;
+	padding: 5px;
+	background-color: var(--main-bg-color);
+}
+
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+
+
+/*
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+  .sidebar h1 {float: left;}
+
+
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+*/
