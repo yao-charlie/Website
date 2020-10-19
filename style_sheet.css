@@ -4,6 +4,7 @@
   /* General */
   /* Typopgraphy */
   /* Buttons */
+  /* Lightbox*/
   /* Header */
   /* Navigation Bar */
   /* Intro */
@@ -53,6 +54,7 @@ Fonts
 
   --mq-1: 1000px;
 
+  --footer-height:4.5rem;
 }
 
 @media (min-width: 750px){
@@ -94,6 +96,11 @@ strong {font-weight: var(--fw-bold)}
   z-index: 100;
 }
 
+sup {
+    vertical-align: super;
+    font-size: .5em;
+}
+
 /*******
  Buttons
 *********/
@@ -115,6 +122,10 @@ strong {font-weight: var(--fw-bold)}
   transform: scale(1.1);
 }
 
+
+/*******
+ lightBox
+*********/
 
 .lightBox{
   display: none;
@@ -156,10 +167,28 @@ strong {font-weight: var(--fw-bold)}
 .lightBox__container__title{
   color: var(--clr-light);
   font-size: var(--fs-h2);
-  padding:1em;
-  /* margin-bottom: 1em; */
+  padding-top: .5em;
+  padding-bottom:.1em;
   line-height: 110%;
   background: var(--clr-accent);
+}
+
+.lightBox__container__subtitle{
+  color: var(--clr-light);
+  font-size: var(--fs-h3);
+  line-height: 130%;
+  background: var(--clr-accent);
+  padding-bottom: .1em;
+}
+
+.lightBox__container__subtitle2{
+  color: var(--clr-light);
+  font-size: 1em;
+  padding-top: .1em;
+  padding-bottom: 1em;
+  margin:0;
+  background: var(--clr-accent);
+  font-style: italic;
 }
 
 /* .lightBox__container__title::after{
@@ -183,6 +212,12 @@ strong {font-weight: var(--fw-bold)}
 }
 
 .lightBox__container__item{
+  text-align: left;
+}
+
+.lightBox__container__item__title{
+  text-align: center;
+  padding-top: 1em;
 
 }
 
@@ -199,6 +234,13 @@ h3 {
 h1 { font-size: var(--fs-h1)}
 h2 { font-size: var(--fs-h2)}
 h3 { font-size: var(--fs-h3)}
+
+.link_subtle{
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  background-color: inherit;
+}
 
 .section__title{
   margin-top:1em;
@@ -380,7 +422,7 @@ Navigation Bar
 }
 
 .menu-toggle:hover{
-  transform: scale(120%);
+  transform: scale(125%);
 }
 
 .open:focus {
@@ -400,17 +442,25 @@ Navigation Bar
 
 }
 
+
+
 .hamburger::before {
   transform: translateY(-6px);
 }
 
 .hamburger::after {
-  transform: translateY(3px);
+  transform: translateY(2.5px);
+  height:3.5px;
 }
 
 .hamburger:hover {
   /* transform: scale(130%); */
 }
+
+/* .hamburger:hover::after {
+  transform: translateY(3px);
+} */
+
 
 .open .hamburger {
   transform: rotate(45deg);
@@ -525,7 +575,7 @@ Intro
 
 .intro__link,
 .intro__socialM-links__item {
-  margin: 0 .2em;
+  margin: 0 .15em;
 }
 
 .intro__link:hover,
@@ -855,12 +905,25 @@ margin-bottom: auto;
 Footer
 *********/
 
+#page-container{
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: var(--footer-height);    /* Footer height */
+}
+
 .footer {
   background: var(--clr-dark);
   color: var(--clr-light);
   text-align:center;
   padding: 2.5em, 0;
   font-size: var(--fs-h3);
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height: var(--footer-height);
 }
 
 .footer a{

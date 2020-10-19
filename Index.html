@@ -9,12 +9,37 @@
 		<script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body>
+<!-- TODO List -->
+<!--
+-Implement keyboard accessibility for lightboxes. Possibly use: <a href="#" onClick="return false;">
+-Implement phone/email links
+-Create project profile template, possibly script headers/footer/hamburger nav
 
+-Copy for highlighted projects:
+	-IHSC
+	-WIDC
+	-UniverCity Childcare
+	-UBC Supermileage
+	-Ecole au Coeur de L'ile?
+	-General Code?
+	-CYAO Photography website/business?
+	-Photography for Bowinn/Keith?
+	-Iceland trip?
+	-MTL/NYC trip?
+	-SEA trip?
+	-Misc Food?
+-->
+
+
+
+	<body>
+	<div id="page-container">
+	<div id="content-wrap">
 		<header>
 			<div class= "container">
 
-			<h1 class="logo"> Charlie Yao </h1>
+			<h1 class="logo"><a class="link_subtle" href="index.html">Charlie Yao</a></h1>
+
 			<button class="menu-toggle" role="button">
 
 				<div class="hamburger"></div>
@@ -70,27 +95,27 @@
 
 <!-- Characteristics -->
 			<section class = "character" id="character">
-				<h2 class = "section__title section__title--character"> How I add Value </h2>
+				<h2 class = "section__title section__title--character"> Added Value </h2>
 
 				<div class = "character_slides">
 					<div class = "character_slide">
 						<h3>Engineer</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Graduating from Engineering Physics at UBC, with a specialty in Electrical, a Minor in Commerce and a course short of an Honours in Mathematics, I’ve applied this towards a career in consulting engineering services for electrical systems of buildings. From world-class sustainability projects to hospitals; single family homes to low-income housing; and, offices to data-centres, I’m grateful and proud to have helped hundreds of clients and stakeholders, and build communities that have served tens of thousands more.</p>
 					</div>
 
 					<div class = "character_slide">
 						<h3>Artist</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>I'm proud to complement my STEM credentials with an eye for aesthetics and prose. This creativity has helped in preparing winning marketing materials and proposals, supplementing business development goals. My talents for photography have helped win lighting awards on my projects; helped a friend (and hopefully two) win an election; and supported a photography business on the side. It is now helping me build this website.</p>
 					</div>
 
 					<div class = "character_slide">
 						<h3>Problem Solver</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Engineers have no monopoly in problem solving. The most valued individuals in an organization describe their days as solving problems. This has served me well beyond the technical as I apply creative solutions to many problems without a strict technical solution. From personnel management, business acquisition, project management, stakeholder analysis and more, I strive to improve the organization: sell more stuff, to more people, more often, for more money, more efficiently.</p>
 					</div>
 
 					<div class = "character_slide">
 						<h3>Leader</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>I’m honoured by the opportunity to have led many different groups over my life. From humble beginning as captain on various sports teams to leading diverse engineering teams on hundred million dollar projects, I do not take the trust invested in me lightly. From trust invested from business leaders; trust from colleagues on technical expertise; trust from nominations and voting in volunteer positions, I reward that trust by helping those around me succeed in their own ambitions.</p>
 					</div>
 				</div>
 				<a href="#character" class="btn">Projects</a>
@@ -116,7 +141,7 @@
 					<p class = "skills__item"> Management </p> -->
 
 					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 1)">
-						<p>Leadership & Management</p>
+						<p>Leadership & Management</a></p>
 					</div>
 					<div class = "skills__item" onclick="openLBox('skills__content__lightbox'); currentLBContent('skills__content__lightbox', 'skills__lightBox__container', 2)">
 						<p>Project Management</p>
@@ -138,18 +163,25 @@
 					<div id = 'skills__content__lightbox' class = lightBox onclick="closeLBox('skills__content__lightbox')">
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Leadership & Management</p>
+								<h2 class ="lightBox__container__title">Leadership & Management</h2>
+								<h3 class ="lightBox__container__subtitle2">Highlights and Achievements</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Led technical teams of up to twenty people</li>
+											<li>Responsible for financial performance of multiple engineering teams</li>
+											<li>Responsible for hiring, resource planning, growth planning of multiple engineering teams</li>
+											<li>Responsible for bringing business in the door</li>
+											<li>Forman/informal training on organizational behaviour and incentive structures</li>
+											<li>Extensive research to improve ERP systems/software</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Professional responsibilities of Director, Manager, Team Lead, Mentor</li>
+											<li>Voted to be President of the Engineering Physics Student Society for 2007-2008</li>
+											<li>Voted to be Provincial Chair of the Association of Consulting Engineers Young Professional Group for 2014</li>
+											<li>Outreach and fundraising leader for the UBC Supermileage Team for 2005-2006</li>
 										</ul>
 									</div>
 
@@ -159,18 +191,22 @@
 
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Project Management</p>
+								<h2 class ="lightBox__container__title">Project Management</h2>
+								<h3 class ="lightBox__container__subtitle2">Methodology and Responsibilities</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Focus on resource planning, scheduling and stakeholder requirements</li>
+											<li>Focus on value creation for clients</li>
+											<li>Formal/informal training and practice including topics such as Waterfall, Agile, Lean, Integrated Project Delivery methods</li>
+											<li>Extensive research to improve and implement project management systems/software</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Responsible for the PM duties for MMM Group's technical teams for the $200M IHSC Project</li>
+											<li>Responsible for hundreds of projects from preliminary design to building occupancy</li>
+											<li>Responsible for multi-displinary teams when required</li>
 										</ul>
 									</div>
 								</div>
@@ -179,18 +215,25 @@
 
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Programming</p>
+								<h2 class ="lightBox__container__title">Programming</h2>
+								<h3 class ="lightBox__container__subtitle2">Design Philosophy and Languages</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Define the problem, break it down to modular components with flow charts</li>
+											<li>Define data structures and algorithms with trade-offs</li>
+											<li>Define languages and frameworks which may be most applicable</li>
+											<li>Identify existing resources which may be repurposed</li>
+											<li>Execute, debug, maintain and likely iterate frequently</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Formal training with C++ and Assembly</li>
+											<li>Comfort with Python, HTML, CSS</li>
+											<li>Past experience with Matlab, Mathematica.</li>
+											<li>Familiarity/exposure with Java, Javascript, C#, Ruby, misc. esoteric langauges such as Rockstar or SonicPi</li>
+											<li>Enough experience with polyglotism to understand commonalities in many languages: datatypes, function declarations, control flow, etc.</li>
 										</ul>
 									</div>
 								</div>
@@ -198,18 +241,30 @@
 						</div>
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Electrical Engineering</p>
+								<h2 class ="lightBox__container__title">Electrical Engineering</h2>
+								<h3 class ="lightBox__container__subtitle2">Design Skills and Methods</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Liscensed Profession Engineer of EGBC (and formerly APEGA and PEO, resignation in good standing)</li>
+											<li>Application of Electrical and Building Codes</li>
+											<li>Load studies and analysis</li>
+											<li>Reliability and redundancy analysis and design</li>
+											<li>Aesthetic design considerations</li>
+											<li>Design respecting occupant health and safety</li>
+											<li>Condition assessments</li>
+											<li>Opinions on payback and cost analysis</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Design of power distribution systems</li>
+											<li>Design of lighting systems</li>
+											<li>Design of life-safety systems (fire alarm, EM lighting, etc)</li>
+											<li>Design of distribution for information and communications technology systems</li>
+											<li>Design of electronic security systems (access control, intrusion alarm, CCTV)</li>
+											<li>Design of special systems: hazardous location, EM & UPS power, healthcare power safety</li>
+											<li>Leading sustainability design and LEED<sup>®</sup> AP BD+C Accrediation</li>
 										</ul>
 									</div>
 								</div>
@@ -217,18 +272,26 @@
 						</div>
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Business Development</p>
+								<h2 class ="lightBox__container__title">Business Development</h2>
+								<h3 class ="lightBox__container__subtitle2">Philosophy, Capabilities and Achievements</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Comfort and enjoyment in developing business relationships</li>
+											<li>Diverse interests to suit potential partners</li>
+											<li>Respect for colleagues with an aim to understand mutual value propositions</li>
+											<li>Understanding internal factors which affect external perception and performance</li>
+											<li>Tripled business revenue and quadrupled profits for my team while at Williams Engineering</li>
+											<li>Grew KD Electrical in Vancouver to double the staff</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Experience in attending industry events and successfully develooping relationships</li>
+											<li>Understanding of business and commercial theory to aid in strategic growth planning and initatives</li>
+											<li>Application of theory to develop and grow new and existing markets</li>
+											<li>Experience in writing and developing business plans</li>
+											<li>Extensive research to improve and implement CRM systems/software</li>
 										</ul>
 									</div>
 								</div>
@@ -236,18 +299,22 @@
 						</div>
 						<div class = "skills__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Proposals & Marketting</p>
+								<h2 class ="lightBox__container__title">Proposals & Marketting</h2>
+								<h3 class ="lightBox__container__subtitle2">Capabilities and Contributions</h3>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Experience with preparing diverse proposals fitting many RFQ/RFP requirements</li>
+											<li>Experience and comfort in informational research on propsal requirements including value propositions and identifying key stakeholders and decision makers</li>
+											<li>A whole understanding and application in business development and product production activities to inform marketting campaigns</li>
 										</ul>
 									</div>
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Excellent verbal and written English skills</li>
+											<li>Aided significantly in preparing marketting copy and promotional materials</li>
+											<li>Talent for photography allowing quicker creation of highquality marketting materials</li>
+											<li>Experience with various software suites in preparing client-facing materials</li>
 										</ul>
 									</div>
 								</div>
@@ -310,7 +377,7 @@
 						</div>
 						<div class="experience__subitem">
 							<div class="experience__subitem__text">
-								<p>Engineering Student</p>
+								<p>Student Engineer</p>
 							</div>
 						</div>
 					</div>
@@ -343,7 +410,7 @@
 						</div>
 						<div class="experience__subitem">
 							<div class="experience__subitem__text">
-								<p>Electrical Engineer,	Team Lead</p>
+								<p>Electrical Engineer, Project Manager, Team Lead</p>
 							</div>
 						</div>
 					</div>
@@ -384,18 +451,58 @@
 					<div id = 'experience__content__lightbox' class = lightBox onclick="closeLBox('experience__content__lightbox')">
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Reed Jones Christoffersen, Consulting Engineers</p>
+								<h2 class ="lightBox__container__title">Reed Jones Christoffersen</h2>
+								<h3 class ="lightBox__container__subtitle">Consulting Structural & Building Science Engineering</h3>
+								<h4 class = "lightBox__container__subtitle2">Student Engineer - 2004, 2007</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
+										<ul>
+											<li>Independently conducted investigative/conditional site reviews for concrete restoration</li>
+											<li>Trained new staff in post-tensioning (P/T) reviews techniques</li>
+											<li>Suggestions in P/T investigation increased productivity by 100%</li>
+											<li>Primary field reviewer for 450 W. Cordova parkade P/T and concrete restoration</li>
+											<li>Critical observation of rust and pitting on new replacement P/T strands at 450 W. Cordova; observation prevented future remediation and litigation</li>
+											<li>Created and maintained statistical databases regarding P/T strands</li>
+										</ul>
+									</div>
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
+									</div> -->
+								</div>
+							</div>
+						</div>
+						<div class = "experience__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<h2 class ="lightBox__container__title">University of British Columbia</h2>
+								<h3 class ="lightBox__container__subtitle">Department of Physics and Astronomy; Department of Electrical and Computer Engineering</h3>
+								<h4 class = "lightBox__container__subtitle2">Research Assistant - 2005, 2006, 2007</h4>
+								<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+										<h3 class="lightBox__container__item__title">Dr. Jeff Young - 2005, 2006</h3>
+										<ul>
+											<li>Fabrication of nanoscale photonic crystals using methods similar for creating ICs & CPUs </li>
+											<li>Analysis of E&M solutions of photonic crystals using FDTD methods</li>
+											<li>Wrote user manual for PECVD device</li>
+											<li>Trained new students in cleanroom techniques and SOPs</li>
+											<li>Investigated photonic crystal structures for applications in quantum computing</li>
+										</ul>
 									</div>
 									<div class = "lightBox__container__item">
+										<h3 class="lightBox__container__item__title">Dr. David Jones - 2006</h3>
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Design, characterization and construction of a temperature controller for an ultrafast laser</li>
+											<li>Design, characterization and construction of a signal selector for an adjacent ultra-cold physics lab</li>
+											<li>Experience with free-space optics, PCB design and fabrication, machining and CAD</li>
+										</ul>
+									</div>
+									<div class = "lightBox__container__item">
+										<h3 class="lightBox__container__item__title">Dr. Lukas Chrostowski - 2007</h3>
+										<ul>
+											<li>Optical fibre apparatus used to study novel VCSEL semiconductor laser structure behavior</li>
+											<li>Research focused on mode-locking behaviour between adjacen VCSELs for creating of a frequenct comb</li>
 										</ul>
 									</div>
 								</div>
@@ -403,115 +510,132 @@
 						</div>
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">University of British Columbia</p>
+								<h2 class ="lightBox__container__title">MMM Group</h2>
+								<h3 class ="lightBox__container__subtitle"><em>Currently WSP, formerly R.A. Duff & Associates</em> <br> Multi-disciplinary Consulting Engineering</h3>
+								<h4 class = "lightBox__container__subtitle2">Engineer-in-Training/Project Lead/Electrical Engineer - 2008-2014</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Project manager for IHSC hospital (~$200M P3) for MMM disciplines of mechanical, electrical, civil, landscape, information technology, integration management, sustainability – LEED<sup>®</sup> Gold</li>
+											<li>Electrical design lead for Wood Innovation & Design Centre – tallest all-wood building in North America, LEED<sup>®</sup> Gold</li>
+											<li>Project manager and designer for Sarah Steele, Alcohol and Drug rehabilitation health centre.</li>
+											<li>Electrical design lead for Quantum Matter Institute lab at UBC – advanced physics laboratory</li>
+											<li>Electrical designer for UniverCity Childcare – 1st complete Living Building Challenge targeted building in Canada</li>
+											<li>Electrical designer for UNBC Bioenergy Plant – LEED<sup>®</sup> Platinum Certified</li>
+											<li>Communicating professionally with clients, architects, consultants, salesmen and contractors.</li>
+											<li>Experience with many current sustainability issues, technologies and their implementation.</li>
+											<li>Experience with many LEED<sup>®</sup> Gold+ projects</li>
+											<li>Experience with social housing/residential, K-12 and post-secondary educational, medical clinics, light industrial plants, laboratories, office spaces, mission critical facilities, community centres and cultural facilities</li>
+											<li>Recruiting and mentoring co-op students</li>
+											<li>Aiding in internal sustainability group meetings and initiatives</li>
+											<li>Business development and preparing proposals</li>
 										</ul>
 									</div>
-									<div class = "lightBox__container__item">
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">MMM Group Ltd.</p>
+								<h2 class ="lightBox__container__title">Williams Engineering Canada</h2>
+								<h3 class ="lightBox__container__subtitle">Multi-disciplinary Consulting Engineering</h3>
+								<h4 class = "lightBox__container__subtitle2">Electrical Engineer/Project Manager/Team Lead - 2014-2018</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+										<li>Electrical engineer-of-record for Lower Mainland and projects across BC and Alberta</li>
+										<li>Electrical team leader for Lower Mainland, including mentoring junior staff</li>
+										<li>Business development, proposals and client representation for electrical in Lower Mainland.</li>
+										<li>Review of invoicing, project progress, revenue projects, staff projections, etc.</li>
+										<li>Design of power, lighting, communication, life-safety and security systems for new construction, tenant improvements and renovations</li>
+										<li>Primarily responsible for all project management, design and coordination of project requirements from schematic design through contract administration with high independence</li>
+										<li>Diverse projects from residential, commercial shell space, retail/restaurant fit outs, office fit outs, light industrial fit outs, data centres, post-secondary education and healthcare</li>
+										<li>Responsible for doubling the electrical team size and transforming the team to be profitable</li>
+
 										</ul>
 									</div>
-									<div class = "lightBox__container__item">
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Williams Engineering Canada</p>
+								<h2 class ="lightBox__container__title">CYAO Photography</h2>
+								<h3 class ="lightBox__container__subtitle">Photography Services</h3>
+								<h4 class = "lightBox__container__subtitle2">Sole Proprietor - 2015-2018</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Founded as a side business to serve photographic service demand</li>
+											<li>Responsible for all operations, business development, production, client management, financial managment, inventory, capital, etc</li>
+											<li>Diverse experience from corporate portrature and marketting materials, product photography, events and weddings, etc</li>
+											<li>Closed business to focus more efforts into engineering career</li>
 										</ul>
 									</div>
-									<div class = "lightBox__container__item">
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">CYao Photography</p>
+								<h2 class ="lightBox__container__title">Omicron</h2>
+								<h3 class ="lightBox__container__subtitle">Development, Architecture, Engineering, and Construction Services</h3>
+								<h4 class = "lightBox__container__subtitle2">Director, Engineering - 2018</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Overseeing and providing leadership for structural, mechanical, electrical engineering teams, including business development, QAQC, efficient processes, financial performance and regulatory issues.</li>
+											<li>Developing clients and promoting engineering services</li>
+											<li>Supporting, growing and championing innovation and excellence in engineering practice</li>
+											<li>Fostering a culture of collaboration and integration</li>
+											<li>Providing senior project management support, and electrical engineering support and leadership.</li>
 										</ul>
 									</div>
-									<div class = "lightBox__container__item">
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
 						<div class = "experience__lightBox__container lightBox__container">
 							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Omicron - Architectural, Engineering, Construction</p>
+								<h2 class ="lightBox__container__title">Krahn Group / KD Electrical</h2>
+								<h3 class ="lightBox__container__subtitle">Multi-disciplinary Architecture & Engineering</h3>
+								<h4 class = "lightBox__container__subtitle2">Electrical Manager - 2018-2020</h4>
 								<div class = "lightBox__container__content">
 									<div class = "lightBox__container__item">
 										<ul>
-											<li>1</li>
-											<li>2</li>
+											<li>Management and leadership of the Electrical Engineering team in Vancouver</li>
+											<li>Tasked to grow group in Vancouver</li>
+											<li>Responsible for proposals, business development, mentorship, engineer-of-record duties, design, construction administration, project management, invoicing, office management, and client coordination</li>
+											<li>APEGA Responsible Member for Edmonton office</li>
+
 										</ul>
 									</div>
-									<div class = "lightBox__container__item">
+									<!-- <div class = "lightBox__container__item">
 										<ul>
 											<li>1</li>
 											<li>2</li>
 										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class = "experience__lightBox__container lightBox__container">
-							<div class = "lightBox__container__window">
-								<p class ="lightBox__container__title">Krahn Group - KD Electrical Ltd.</p>
-								<div class = "lightBox__container__content">
-									<div class = "lightBox__container__item">
-										<ul>
-											<li>1</li>
-											<li>2</li>
-										</ul>
-									</div>
-									<div class = "lightBox__container__item">
-										<ul>
-											<li>1</li>
-											<li>2</li>
-										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -557,5 +681,7 @@
 		</footer>
 		<script src="scripts\hamburger.js"></script>
 		<script src="scripts\lightbox.js"></script>
+	</div>
+	</div>
 	</body>
 </html>
