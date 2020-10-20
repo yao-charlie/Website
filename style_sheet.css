@@ -952,6 +952,64 @@ Footer
 }
 
 
+
+ /*******
+ Photography
+ *********/
+
+ .photography{
+   background-color: var(--clr-dark);
+   color: var(--clr-light);
+   text-align: center;
+ }
+
+
+ .photography__body{
+   display:grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .photography__item{
+   background: var(--clr-accent);
+   overflow: hidden;
+   margin:.5rem;
+   max-width: 300px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+.photography__item__border{
+  padding: .5em;
+}
+
+
+ .photography__img{
+   transition:
+     transform 750ms cubic-bezier(.5, 0, .5, 1),
+     opacity 250ms linear;
+
+ }
+ .photography__img:hover,
+ .photography__item:focus .photography__img{
+   transform: scale(1.1);
+   opacity: .75;
+
+ }
+
+.photography__lightBox__container__window{
+  padding: 1em;
+}
+
+.photography__img__full{
+  margin-left: auto;
+  margin-right: auto;
+  padding:1em;
+  background-color: var(--clr-light);
+}
+
+
 /*******
  Specifics
 *********/
