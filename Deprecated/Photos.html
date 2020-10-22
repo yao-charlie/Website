@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>Charlie Yao</title>
+		<link href="style_sheet.css" rel="stylesheet" type="text/css"/>
+
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+		<!-- Social media svg's -->
+		<script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
+
+
+		<style>
+		    html,
+		    body {
+		      position: relative;
+		      height: 100%;
+		    }
+
+		    body {
+		      background: black;
+		      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		      font-size: 14px;
+		      color: #000;
+		      margin: 0;
+		      padding: 0;
+		    }
+
+		    .swiper-container {
+		      width: 100%;
+		      height: 300px;
+		      margin-left: auto;
+		      margin-right: auto;
+		    }
+
+		    .swiper-slide {
+		      background-size: cover;
+		      background-position: center;
+		    }
+
+		    .gallery-top {
+		      height: 80%;
+		      width: 100%;
+					margin-bottom: 100px;
+		    }
+
+		    .gallery-thumbs {
+		      height: 20%;
+		      box-sizing: border-box;
+		      padding: 10px 0;
+		    }
+
+		    .gallery-thumbs .swiper-slide {
+		      height: 100%;
+		      opacity: 0.4;
+		    }
+
+		    .gallery-thumbs .swiper-slide-thumb-active {
+		      opacity: 1;
+		    }
+		  </style>
+
+	</head>
+
+
+	<body>
+	<div id="page-container">
+	<div id="content-wrap">
+		<header>
+			<div id = "common__header"></div>
+			<script src="scripts\common_header.js"></script>
+		</header>
+
+		<main>
+
+			<!-- Swiper -->
+		  <div class="swiper-container gallery-top">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=1)"></div>
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=2)"></div>
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=3)"></div>
+
+		    </div>
+		    <!-- Add Arrows -->
+		    <div class="swiper-button-next swiper-button-white"></div>
+		    <div class="swiper-button-prev swiper-button-white"></div>
+		  </div>
+		  <div class="swiper-container gallery-thumbs">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=1)"></div>
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=2)"></div>
+		      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=3)"></div>
+
+		    </div>
+		  </div>
+
+		  <!-- Swiper JS -->
+			<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+		  <!-- Initialize Swiper -->
+		  <script>
+		    var galleryThumbs = new Swiper('.gallery-thumbs', {
+		      spaceBetween: 10,
+		      slidesPerView: 3,
+		      loop: true,
+		      freeMode: true,
+		      loopedSlides: 3, //looped slides should be the same
+		      watchSlidesVisibility: true,
+		      watchSlidesProgress: true,
+		    });
+		    var galleryTop = new Swiper('.gallery-top', {
+		      spaceBetween: 10,
+		      loop: true,
+		      loopedSlides: 3, //looped slides should be the same
+		      navigation: {
+		        nextEl: '.swiper-button-next',
+		        prevEl: '.swiper-button-prev',
+		      },
+		      thumbs: {
+		        swiper: galleryThumbs,
+		      },
+		    });
+		  </script>
+
+
+
+
+
+		</main>
+
+
+
+
+<!-- Footer -->
+		<footer class="footer">
+			<div id = "common__footer"></div>
+			<script src="scripts\common_footer.js"></script>
+		</footer>
+
+
+
+		<script src="scripts\hamburger.js"></script>
+
+		<!-- May not need: -->
+		<script src="scripts\lightbox.js"></script>
+	</div>
+	</div>
+	</body>
+</html>

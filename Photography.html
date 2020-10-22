@@ -1,103 +1,180 @@
 <!DOCTYPE html>
-<html lang= "en">
-	<head>
-		<meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<title>Charlie Yao</title>
-		<link href="style_sheet.css" rel="stylesheet" type="text/css"/>
-		<script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
-	</head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Charlie Yao</title>
+  <link href="style_sheet.css" rel="stylesheet" type="text/css"/>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Social media svg's -->
+  <script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #000;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      padding:5em 5em 0em 5em;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    .gallery-top {
+      height: 80%;
+      width: 100%;
+
+    }
+
+    .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0 80px 0;
+    }
+
+    .gallery-thumbs .swiper-slide {
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  </style>
+</head>
 
 
 
 <!-- TODO -->
 <!--
 -Add lazy loading
--Complete revising photo preview to lightboxes
--Review adding picture 'scroll' functionlity - ideally touchscreen, assuming this is desired. Photoswipe may be a candidate package?
+-Refector style
+-adjust clearances- change background image to regular image inclusion for gallery-top
+
 -->
 
 
-	<body>
-	<div id="page-container">
-	<div id="content-wrap">
-		<header>
-			<div id = "common__header"></div>
-			<script src="scripts\common_header.js"></script>
-		</header>
-		<main>
+
+<body>
+  <header>
+    <div id = "common__header"></div>
+    <script src="scripts\common_header.js"></script>
+  </header>
 
 
-			<section class = "photography" id="photography">
-				<h3 class="photography__title section__title--photography"> Photography </h3>
+  <!-- Swiper -->
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=1)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=2)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=3)"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=1)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=2)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=3)"></div>
+    </div>
+  </div>
 
-				<div class = "photography__body">
 
-					<!-- Project item 1 -->
-					<div class = "photography__item__border">
-						<div class = "photography__item" onclick="openLBox('photography__content__lightbox'); currentLBContent('photography__content__lightbox', 'photography__lightBox__container', 1)">
-							<img src="https://picsum.photos/400?random=1" alt="" class="photography__img">
-						</div>
-					</div>
-
-					<!-- Project item 2 -->
-					<a href="#" class = "photography__item">
-						<img src="https://picsum.photos/400?random=2" alt="" class="photography__img">
-					</a>
-
-					<!-- Project item 3 -->
-					<a href="#" class = "photography__item">
-						<img src="https://picsum.photos/400?random=3" alt="" class="photography__img">
-					</a>
-
-					<!-- Project item 4 -->
-					<a href="#" class = "photography__item">
-						<img src="https://picsum.photos/400?random=4" alt="" class="photography__img">
-					</a>
-
-					<!-- Project item 5 -->
-					<a href="#" class = "photography__item">
-						<img src="https://picsum.photos/400?random=5" alt="" class="photography__img">
-					</a>
-
-					<!-- Project item 6 -->
-					<a href="#" class = "photography__item">
-						<img src="https://picsum.photos/400?random=6" alt="" class="photography__img">
-					</a>
-				</div>
+  <footer class="footer">
+    <div id = "common__footer"></div>
+    <script src="scripts\common_footer.js"></script>
+  </footer>
 
 
 
-				<div id = 'photography__content__lightbox' class = lightBox onclick="closeLBox('photography__content__lightbox')">
-					<div class = "photography__lightBox__container lightBox__container">
-						<!-- <div class = "lightBox__container__window"> -->
-							<!-- <div class = "lightBox__container__content"> -->
-								<img src="https://picsum.photos/800?random=1" alt="" class="photography__img__full">
-							<!-- </div> -->
-						<!-- </div> -->
-					</div>
-				</div>
-			</section>
+  <script src="scripts\hamburger.js"></script>
+
+  <!-- May not need: -->
+  <script src="scripts\lightbox.js"></script>
 
 
+ <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 3, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+
+    });
+
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 3, //looped slides should be the same
+
+      // effect: 'flip',
+      // flipEffect:{
+      //   slideShadows: false,
+      //   limitRotation: false,
+      // },
+      // effect: 'fade',
+      // fadeEffect:{
+      //   crossFade: true,
+      // },
+
+      effect: 'coverflow',
+      coverflowEffect:{
+        rotate:30,
+        slideShadows: true,
+        modifier: 2,
+        // depth: 100,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
 
 
-		</main>
-
-<!-- Footer -->
-		<footer class="footer">
-			<div id = "common__footer"></div>
-			<script src="scripts\common_footer.js"></script>
-		</footer>
+</body>
 
 
-
-		<script src="scripts\hamburger.js"></script>
-
-		<!-- May not need: -->
-		<script src="scripts\lightbox.js"></script>
-	</div>
-	</div>
-	</body>
+-->
 </html>

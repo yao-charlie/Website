@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>Charlie Yao</title>
+		<link href="style_sheet.css" rel="stylesheet" type="text/css"/>
+		<script src="https://kit.fontawesome.com/020c5d2908.js" crossorigin="anonymous"></script>
+	</head>
+
+
+
+<!-- TODO -->
+<!--
+-Add lazy loading
+-Complete revising photo preview to lightboxes
+-Review adding picture 'scroll' functionlity - ideally touchscreen, assuming this is desired. Photoswipe may be a candidate package?
+-->
+
+
+	<body>
+	<div id="page-container">
+	<div id="content-wrap">
+		<header>
+			<div id = "common__header"></div>
+			<script src="scripts\common_header.js"></script>
+		</header>
+		<main>
+
+
+			<section class = "photography" id="photography">
+				<h3 class="photography__title section__title--photography"> Photography </h3>
+
+				<div class = "photography__body">
+
+					<!-- Project item 1 -->
+					<div class = "photography__item__border">
+						<div class = "photography__item" onclick="openLBox('photography__content__lightbox'); currentLBContent('photography__content__lightbox', 'photography__lightBox__container', 1)">
+							<img src="https://picsum.photos/400?random=1" alt="" class="photography__img">
+						</div>
+					</div>
+
+					<!-- Project item 2 -->
+					<a href="#" class = "photography__item">
+						<img src="https://picsum.photos/400?random=2" alt="" class="photography__img">
+					</a>
+
+					<!-- Project item 3 -->
+					<a href="#" class = "photography__item">
+						<img src="https://picsum.photos/400?random=3" alt="" class="photography__img">
+					</a>
+
+					<!-- Project item 4 -->
+					<a href="#" class = "photography__item">
+						<img src="https://picsum.photos/400?random=4" alt="" class="photography__img">
+					</a>
+
+					<!-- Project item 5 -->
+					<a href="#" class = "photography__item">
+						<img src="https://picsum.photos/400?random=5" alt="" class="photography__img">
+					</a>
+
+					<!-- Project item 6 -->
+					<a href="#" class = "photography__item">
+						<img src="https://picsum.photos/400?random=6" alt="" class="photography__img">
+					</a>
+				</div>
+
+
+
+				<div id = 'photography__content__lightbox' class = lightBox onclick="closeLBox('photography__content__lightbox')">
+					<div class = "photography__lightBox__container lightBox__container">
+						<!-- <div class = "lightBox__container__window"> -->
+							<!-- <div class = "lightBox__container__content"> -->
+								<img src="https://picsum.photos/800?random=1" alt="" class="photography__img__full">
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+				</div>
+			</section>
+
+
+
+
+		</main>
+
+<!-- Footer -->
+		<footer class="footer">
+			<div id = "common__footer"></div>
+			<script src="scripts\common_footer.js"></script>
+		</footer>
+
+
+
+		<script src="scripts\hamburger.js"></script>
+
+		<!-- May not need: -->
+		<script src="scripts\lightbox.js"></script>
+	</div>
+	</div>
+	</body>
+</html>
