@@ -18,33 +18,21 @@
 
   <!-- Overloaded CSS due to swiper classes. TODO: check refactoring -->
   <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
 
-    body {
-      background: #000;
-      /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000; */
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+
 
     .swiper-window{
-      position: relative;
-      height: 90%;
+      position: static;
+      height: calc(100vh - var(--footer-height));
     }
 
     .swiper-container {
       width: 100%;
-      height: 300px;
+      /* height: 300px; */
       margin-left: auto;
       margin-right: auto;
-      padding:5em 5em 0em 5em;
+      padding:3.6em 5em 0em 5em;
+      background-color: black;
     }
 
     .swiper-slide {
@@ -53,25 +41,22 @@
       background-position: center;
       margin-left: auto;
       margin-right: auto;
-      padding:10px;
-    }
+      /* padding:.5em; */
+      }
 
 
     .swiper-slide_thumb {
-
       background-position: center;
       margin-left: auto;
       margin-right: auto;
-      padding:0px;
+
     }
 
     .full{
       /* background-size: contain;
       background-position: top; */
-      background-color: var(--clr-dark);
+      background-color: black;
     }
-
-
 
     .photo{
       margin-left: auto;
@@ -84,10 +69,12 @@
 
     }
 
-    .photo img{
-      /* border: 1em solid white; */
+    /* .full img{
+      border: 1em solid white;
       box-shadow: 0 0 0 10px white;
-    }
+      padding: 1px;
+      background-color: white;
+    } */
 
     /* .frame{
       margin-left: auto;
@@ -106,10 +93,11 @@
     }
 
     .gallery-thumbs {
-      height: 30%;
+      height: 20%;
       box-sizing: border-box;
       padding-top: 10px;
-      padding-bottom: 40px;
+      padding-bottom: 10px;
+      /* padding-bottom: 40px; */
       /* min-height: 200px; */
     }
 
@@ -122,16 +110,26 @@
       opacity: 1;
     }
 
-    .footer{
-      opacity: 100;
-      z-index: 50;
-    }
 
     .swiper-button-prev,
     .swiper-button-next{
       color: var(--clr-accent);
       margin-top:5%;
     }
+
+    .swiper-pagination{
+      background-color: var(--clr-accent);
+      color: var(--clr-light);
+      width: 5em;
+      position: fixed;
+      bottom: calc(100% - 2.5em);
+      left: calc(50% - 2.5em);
+      z-index: 500;
+
+    }
+
+
+
   </style>
 </head>
 
@@ -148,12 +146,15 @@
 
 
 <body>
+
+  <div id="page-container">
+	<div id="content-wrap">
   <header>
     <div id = "common__header"></div>
     <script src="scripts\common_header.js"></script>
   </header>
 
-<!-- <img src="https://picsum.photos/400?random=4" alt="" class="photo"> -->
+
 
 <article class="swiper-window">
   <!-- Swiper -->
@@ -169,9 +170,15 @@
       <div class="swiper-slide full" ><img src="https://picsum.photos/400?random=1" alt="" class="photo"></div>
       <div class="swiper-slide full" ><img src="https://picsum.photos/400?random=2" alt="" class="photo"></div>
       <div class="swiper-slide full" ><img src="https://picsum.photos/400?random=3" alt="" class="photo"></div>
+      <div class="swiper-slide full" ><img src="https://picsum.photos/400?random=4" alt="" class="photo"></div>
+      <div class="swiper-slide full" ><img src="https://picsum.photos/400?random=5" alt="" class="photo"></div>
 
 
     </div>
+    <!-- pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+
     <!-- Add Arrows -->
     <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
@@ -181,9 +188,17 @@
       <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=1)"></div>
       <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=2)"></div>
       <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=3)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=4)"></div>
+      <div class="swiper-slide" style="background-image:url(https://picsum.photos/400?random=5)"></div>
     </div>
   </div>
+
+  <!-- pagination -->
+  <div class="swiper-pagination"></div>
+
 </article>
+
+
 
   <footer class="footer">
     <div id = "common__footer"></div>
@@ -195,7 +210,7 @@
   <script src="scripts\hamburger.js"></script>
 
   <!-- May not need: -->
-  <script src="scripts\lightbox.js"></script>
+  <!-- <script src="scripts\lightbox.js"></script> -->
 
 
  <!-- Swiper JS -->
@@ -206,21 +221,37 @@
   <script>
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
-      slidesPerView: 7,
+      slidesPerView: 3,       //how many thumbnail slides fit between content slide. 3 seems optimal for mobile
+
+      breakpoints: {
+          '@1.2': {
+            slidesPerView: 5,
+          },
+          '@1.6': {
+            slidesPerView: 8,
+          },
+          },
+
+
+      grabCursor: true,
       loop: true,
       freeMode: true,
       loopedSlides: 3, //looped slides should be the same
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
 
+
     });
 
     var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 5,
+      spaceBetween: 1,
       loop: true,
       loopedSlides: 3, //looped slides should be the same
+      // autoHeight: true,
+      // zoom: true,
+      grabCursor: true,
 
-
+      lazy: true,
       //Note that flip affect seems to bug out - flickering.
       // effect: 'flip',
       // flipEffect:{
@@ -229,6 +260,11 @@
       // },
 
 
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
       // effect: 'fade',
       // fadeEffect:{
       //   crossFade: true,
@@ -248,11 +284,13 @@
       },
       thumbs: {
         swiper: galleryThumbs,
+
       },
     });
   </script>
 
-
+</div>
+</div>
 </body>
 
 
