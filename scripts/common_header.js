@@ -16,7 +16,9 @@ var codeBlock =
       '<li><a href="Photography.html">Photography</a></li>'+
       '<li><a href="#">Projects</a></li>'+
     '</ul>'+
-  '</nav>';
+  '</nav>'
+
+  +'</div>';
 
 
 document.getElementById("common__header").innerHTML = codeBlock
