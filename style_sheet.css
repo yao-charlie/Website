@@ -704,6 +704,8 @@ Skills
 
 .skills{
   background-color: var(--clr-light);
+
+
   text-align: center;
 
 }
@@ -766,12 +768,19 @@ Projects
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
+
+  background-image: url(./img/Markup.JPG);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 
 .projects__body{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -782,7 +791,10 @@ Projects
   margin:.5rem;
   max-width: 400px;
   max-height: 400px;
-  display: grid;
+  min-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* display: flex;
   align-items: center;
   justify-content: center;
@@ -794,28 +806,62 @@ Projects
   transition:
     transform 300ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear; */
+  cursor: pointer;
+}
+
+
+.project_lightbox_image{
+  background-color: var(--clr-dark);
+}
+
+.projects_item_border{
+  display: grid;
+
 }
 
 .projects__img{
-    transition:
+  transition:
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
-    grid-area: 1/1;
-    z-index: 2;
+  grid-area: 1/1;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects__img__title{
-      grid-area: 1/1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  grid-area: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+
 }
 
+.project__img__caption{
+  padding-left: 1rem;
+  margin-top: -1rem;
+  font-size: .5rem;
+}
+
+.projects_lightbox_content{
+  padding: 1em;
+
+}
+
+.projects__lightbox__copy{
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  margin-top: 0;
+}
 
 .projects__img:hover,
 .projects__item:focus .projects__img{
   transform: scale(1.1);
-  opacity: .1;
+  opacity: .15;
 
 }
 
