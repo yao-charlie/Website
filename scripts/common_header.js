@@ -12,9 +12,9 @@ var codeBlock =
   '<nav class="site-nav site-nav--closed">'+
     '<ul>'+
       '<li><a href="Index.html">Profile</a></li>'+
-      '<li><a href="#">Professional</a></li>'+
+      '<li><a href="#">Professional (under construction)</a></li>'+
       '<li><a href="Photography.html">Photography</a></li>'+
-      '<li><a href="#">Projects</a></li>'+
+      '<li><a href="#">Projects (under construction)</a></li>'+
     '</ul>'+
   '</nav>'
 
