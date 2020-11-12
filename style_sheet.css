@@ -40,7 +40,7 @@ Fonts
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #3b7cff;
+  --clr-accent: #3274c9;
 
 
   --fs-h1: 3rem;
@@ -204,7 +204,7 @@ sup {
 .lightBox__container__content{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
