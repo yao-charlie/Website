@@ -11,7 +11,7 @@ var codeBlock =
   '</button>'+
   '<nav class="site-nav site-nav--closed">'+
     '<ul>'+
-      '<li><a href="Index.html">Profile</a></li>'+
+      '<li><a href="index.html">Profile</a></li>'+
       '<li><a href="#">Professional (under construction)</a></li>'+
       '<li><a href="Photography.html">Photography</a></li>'+
       '<li><a href="#">Projects (under construction)</a></li>'+
