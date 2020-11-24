@@ -2,14 +2,14 @@ var codeBlock =
 
 '<ul class = "footer__links">'+
   '<li class="footer__link">'+
-    '<a class="footer__link" href="#">'+
-      '<i class="fas fa-phone-square"></i>'+
-    '</a>'+
+
+      '<i class="fas fa-phone-square intro__socialM-links__item" onclick="openLBox(&#39;contact__content__lightbox&#39;); currentLBContent(&#39;contact__content__lightbox&#39;, &#39;contact__lightBox__container&#39;, 1)"></i>'+
+
   '</li>'+
   '<li class="footer__link">'+
-    '<a class="footer__link" href="#">'+
-      '<i class="fas fa-envelope-square"></i>'+
-    '</a>'+
+
+      '<i class="fas fa-envelope-square intro__socialM-links__item" onclick="openLBox(&#39;contact__content__lightbox&#39;); currentLBContent(&#39;contact__content__lightbox&#39;, &#39;contact__lightBox__container&#39;, 1)"></i>'+
+
   '</li>'+
 
   '<li class="footer__socialM-links__item">'+
