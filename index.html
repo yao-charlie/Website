@@ -46,18 +46,18 @@
 				<p class="section__subtitle section__subtitle--intro"> Engineer, Artist, Problem Solver, Leader</p>
 				<p class="section__subtitle section__subtitle--subtext"> <em>...and reluctant self-promoter.</em></p>
 
-				<img class = "intro__img" src="img\emperor-tamarin.jpg" alt="Portrait"/>
+				<img class = "intro__img" src="img\profile.jpg" alt="Portrait"/>
 
 				<ul class = "intro__links">
 					<li class="intro__link">
-						<a class="intro__link" href="#">
-							<i class="fas fa-phone-square"></i>
-						</a>
+
+							<i class="fas fa-phone-square intro__socialM-links__item" onclick="openLBox('contact__content__lightbox'); currentLBContent('contact__content__lightbox', 'contact__lightBox__container', 1)"></i>
+
 					</li>
 					<li class="intro__link">
-						<a class="intro__link" href="#">
-							<i class="fas fa-envelope-square"></i>
-						</a>
+
+							<i class="fas fa-envelope-square intro__socialM-links__item" onclick="openLBox('contact__content__lightbox'); currentLBContent('contact__content__lightbox', 'contact__lightBox__container', 1)"></i>
+
 					</li>
 				<!-- </ul>
 				<ul class="socialM-links"> -->
@@ -72,6 +72,17 @@
 						</a>
 					</li>
 				</ul>
+
+
+				<div id = 'contact__content__lightbox' class = lightBox onclick="closeLBox('contact__content__lightbox')">
+					<div class = "contact__lightBox__container lightBox__container">
+						<div class = "lightBox__container__window intro__contact__info__window">
+							<img class = "intro__contact__info" src="img\contact.jpg" alt = "<firstname> at my domain.; <Canada>-<Original Vancouver>-376-5647"/>
+						</div>
+					</div>
+				</div>
+
+
 			</section>
 
 <!-- Characteristics -->
@@ -359,7 +370,12 @@
 						</div>
 					</div>
 
-
+					<div class = "projects__item" onclick="openLBox('projects__content__lightbox'); currentLBContent('projects__content__lightbox', 'projects__lightBox__container', 9)">
+						<div class = "projects_item_border">
+							<img src="img\th\cyao-th.jpg" alt="" class="projects__img">
+							<h1 class = projects__img__title> This Website </h1>
+						</div>
+					</div>
 
 					<div id = 'projects__content__lightbox' class = lightBox onclick="closeLBox('projects__content__lightbox')">
 
@@ -605,6 +621,34 @@
 											<li>Top North American campus sustainability project (tied with Harvard University) - Association for the Advancement of Sustainability in Higher Education (AASHE)</li>
 											<li>Northern BC Business and Technology Innovator of the Year</li>
 										</ul>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Project item 9 -->
+						<div class = "projects__lightBox__container lightBox__container">
+							<div class = "lightBox__container__window">
+								<h2 class ="lightBox__container__title"> This Website</h2>
+									<div class = "lightBox__container__content">
+									<div class = "lightBox__container__item">
+									<div class = "lightBox__container__item projects_lightbox_content projects__lightbox__copy">
+										<p>
+										While I considered cheekily simply linking back to the top of this page, perhaps it’s more valuable to highlight a few items on this website. Unsurprisingly, this website was borne primarily to serve as an online CV; however, I’ve also taken the opportunity to integrate the re-working of a previous website, serving as my photography business’ website.
+										<p>
+										</p>
+										The former website was hosted/created on Squarespace, which certainly allowed me to focus on design elements rather than learning HTML/CSS/JS. While I learned some minor items on DNS routing, APIs, SEO, my goals at the time were abstracting the website as a tool alone. I feel much more accomplished now with this (still-in-progress) website.
+										<p>
+										</p>
+										While I believe my focus in the future may be more on the back-end, this experience has provided me a wealth of knowledge in implementing and integrating core CSS/HTML fundamentals; a smidgen of JS for added functionality and templatization; design best-practices; and, using existing solutions.
+										<p>
+										</p>
+										The website is mostly responsive using natural breakpoints with grid and some specific layout changes with media queries, with more refinement to be explored. Animations were subtely added to improve the user experience. Design was mostly left as minimal for brevity and modernity. I’m especially fond of the integration of Swiper into the photo gallery.
+										<p>
+										</p>
+										Please explore! If you’re kind enough to provide feedback, I’m always open to learn more perspectives.
 										</p>
 									</div>
 								</div>
