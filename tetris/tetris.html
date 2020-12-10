@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang ="en" dir="">
+  <head>
+    <meta charset="utf-8"/>
+    <script src="tetris_engine.js"></script>
+    <link rel = "stylesheet" href="style.css"></link>
+
+    <title>Tetris_JS</title>
+  </head>
+
+
+  <body>
+
+
+
+  <h3> Score: <span id = "score"> 0 </span> </h3>
+  <h3> Last Scored: <span id = "last__score"> 0 </span> </h3>
+  <button id="start__button"> Start/Pause </button>
+
+  <div class = "play__area">
+    <div id = "tetris__grid" class = "grid"></div>
+    <div id = "next__grid" class = "nextTetra"></div>
+  </div>
+
+  <h3 id="game__over" style="display: none"> Game Over! </h3>
+
+
+  </body>
+  <!-- Script to create the grids -->
+  <script src="tetris_grid.js"></script>
+</html>
