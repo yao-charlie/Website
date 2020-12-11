@@ -9,64 +9,64 @@ const displaylastScored = document.querySelector('#last__score')
 const gameOverDisplay = document.querySelector('#game__over')
 const width = 10
 const height = 20
+const colours = ['teal', 'blue', 'orange', 'yellow', 'green', 'purple', 'red']
 var gameTimer = null
 var score = 0
 var lost = false
+var interval = 500 //gameTimer in ms to start
 
 
 //tetraminoes
 // N.B. - linear algebra could be used to rotate matricies instead
 
 //TODO: Check centre of rotation issues for L, R, T
-//TODO:revise tetraminoes to follow super rotation system as the current Tetris Guideline
-const LTetramino = [
-    [0, 1, width+1, width*2+1],
-    [width+2, width*2, width*2+1, width*2+2],
-    [0, width, width*2, width*2+1],
-    [width, width+1, width+2, width*2]
-]
-//'CW' L
-const RTetratmino = [
-    [1, width+1, width*2+1, 2],
+
+const iTetramino = [
+    [width, width+1, width+2, width+3],
+    [2, width+2, width*2+2, width*3+2],
+    [width*2, width*2+1, width*2+2, width*2+3],
+    [1, width+1, width*2+1, width*3+1]
+  ]
+const jTetratmino = [
+    [0, width, width+1, width+2],
+    [1, 2, width+1, width*2+1],
     [width, width+1, width+2, width*2+2],
-    [1, width+1, width*2+1, width*2],
-    [width, width*2, width*2+1, width*2+2]
-    // [width, width+1, width]
+    [1, width+1, width*2+1, width*2]
   ]
-const TTetratmino = [
-    [width, width+1, width+2, width*2+1],
-    [2, width+1, width+2, width*2+2],
-    [width+1, width*2, width *2+1, width*2+2],
-    [0, width, width+1, width *2]
-  ]
-const ZTetramino = [
-    [width, width+1, width*2+1, width*2+2],
-    [1, width, width+1, width*2],
-    [width, width+1, width*2+1, width*2+2],
-    [1, width, width+1, width*2]
-  ]
-const STetramino = [
-    [width+1, width+2, width*2, width*2+1],
-    [0, width, width+1, width*2+1],
-    [width+1, width+2, width*2, width*2+1],
-    [0, width, width+1, width*2+1]
-  ]
-const OTetramino = [
+const lTetramino = [
+    [2, width, width+1, width+2],
+    [1, width+1, width*2+1, width*2+2],
+    [width, width+1, width+2, width*2],
+    [0, 1, width+1, width*2+1]
+]
+const oTetramino = [
     [0,1,width, width+1],
     [0,1,width, width+1],
     [0,1,width, width+1],
     [0,1,width, width+1]
   ]
-const ITetramino = [
-    [0, width, width*2, width*3],
-    [width*4, width*4+1, width*4+2, width*4+3],
-    [0, width, width*2, width*3],
-    [width*4, width*4+1, width*4+2, width*4+3]
+const sTetramino = [
+    [1, 2, width, width+1],
+    [1, width+1, width+2, width*2+2],
+    [width+1, width+2, width*2, width*2+1],
+    [0, width, width+1, width*2+1]
   ]
-const tetraminoes = [LTetramino, RTetratmino, TTetratmino, ZTetramino, STetramino, OTetramino, ITetramino]
+const tTetratmino = [
+    [1, width, width +1, width+2],
+    [1, width +1, width +2, width*2+1],
+    [width, width+1, width+2, width*2+1],
+    [1, width, width +1, width*2+1]
+  ]
+const zTetramino = [
+    [0, 1, width+1, width+2],
+    [2, width+1, width+2, width*2+1],
+    [width, width+1, width*2+1, width*2+2],
+    [1, width, width+1, width*2]
+  ]
+
+const tetraminoes = [iTetramino, jTetratmino, lTetramino, oTetramino, sTetramino, tTetratmino, zTetramino]
 
 const nextRotation = 0
-
 //Spawn position
 let currentPosition = 4
 //First rotation
@@ -91,21 +91,30 @@ function assignNextPiece(){
   random = nextRandom
   nextRandom = Math.floor(Math.random()*tetraminoes.length)
   nextPiece = tetraminoes[nextRandom][nextRotation]
-  console.log(nextPiece)
   drawNextPiece()
 }
 
 function drawNextPiece(){
-if(gameTimer){nextPiece.forEach((index)=>{nextSquares[index].classList.add('tetramino')})}
+if(gameTimer){
+  nextPiece.forEach((index)=>{
+    nextSquares[index].classList.add('tetramino')
+    nextSquares[index].style.backgroundColor = colours[nextRandom]
+  })
+
+}
 }
 function undrawNextPiece(){
-  nextPiece.forEach((index)=>{nextSquares[index].classList.remove('tetramino')})
+  nextPiece.forEach((index)=>{
+    nextSquares[index].classList.remove('tetramino')
+    nextSquares[index].style.backgroundColor = ''
+  })
 }
 
 //draw Tetramino as a map to CSS style.
 function draw(){
   currentPiece.forEach(index =>{
     squares[currentPosition+index].classList.add('tetramino')
+    squares[currentPosition+index].style.backgroundColor = colours[random]
   })
 }
 
@@ -113,17 +122,9 @@ function draw(){
 function undraw(){
   currentPiece.forEach(index=>{
     squares[currentPosition+index].classList.remove('tetramino')
+    squares[currentPosition+index].style.backgroundColor = ''
   })
 }
-
-//initialize
-
-
-// tetramino falling
-
-var interval = 500 //gameTimer in ms to start
-// var gameTimer = setInterval(moveDown, interval)
-
 
 
 //Collision Detection
@@ -224,7 +225,6 @@ function gameOver(){
   currentPosition = 4
   if(currentPiece.some( index => squares[currentPosition + index].classList.contains('taken'))){
     clearInterval(gameTimer)
-    console.log("Game Over")
     gameOverDisplay.style.display = "block"
 
     lost = true
@@ -326,6 +326,7 @@ function moveRight() {
 //   draw()
 // }
 
+
 //no kick
 function rotate(){
   placeholderPiece = currentPiece
@@ -357,15 +358,19 @@ function control(key){
   if (key.keyCode === 38){
     if(!freezeCheck()) rotate()
   }
+  if (key.keyCode === 32){
+    while(!freezeCheck()) moveDown()
+  }
+
 }
 
-document.addEventListener('keydown', control)
 
-startButton.addEventListener('click', ()=>{
-
+function start(){
+  document.getElementById("start__button").blur()
   if(gameTimer){
     clearInterval(gameTimer)
     gameTimer = null
+    document.removeEventListener('keydown', control)
   }
 
   else{
@@ -380,11 +385,20 @@ startButton.addEventListener('click', ()=>{
       displayScore.innerHTML = 0
       gameOverDisplay.style.display = "none"
     }
-
+    document.addEventListener('keydown', control)
     draw();
     gameTimer = setInterval(moveDown, interval)
     drawNextPiece()
   }
-})
+}
+
+// function startEnter(key){
+//   if(key.keyCode === 13){
+//     start()
+//   }
+// }
+
+startButton.addEventListener('mousedown', start)
+// document.addEventListener('keydown', startEnter)
 
 })
