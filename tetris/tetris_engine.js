@@ -9,10 +9,10 @@ const displaylastScored = document.querySelector('#last__score')
 const gameOverDisplay = document.querySelector('#game__over')
 const width = 10
 const height = 20
-const colours = ['teal', 'blue', 'orange', 'yellow', 'green', 'purple', 'red']
+const colours = ['cyan', 'dodgerblue', 'orange', 'yellow', 'chartreuse', 'magenta', 'crimson']
 var gameTimer = null
 var score = 0
-var lost = false
+var lost = true
 var interval = 500 //gameTimer in ms to start
 
 
@@ -81,7 +81,7 @@ var random = nextRandom
 let currentPiece = null
 let nextPiece = tetraminoes[nextRandom][currentRotation]
 // currentPiece = nextPiece
-assignNextPiece()
+
 //
 // var nextPiece = null
 
@@ -97,16 +97,17 @@ function assignNextPiece(){
 function drawNextPiece(){
 if(gameTimer){
   nextPiece.forEach((index)=>{
-    nextSquares[index].classList.add('tetramino')
-    nextSquares[index].style.backgroundColor = colours[nextRandom]
+    nextSquares[index+1].classList.add('tetramino')
+    nextSquares[index+1].style.backgroundColor = colours[nextRandom]
+    nextSquares[index+1].style.borderColor = colours[nextRandom]
   })
 
 }
 }
 function undrawNextPiece(){
   nextPiece.forEach((index)=>{
-    nextSquares[index].classList.remove('tetramino')
-    nextSquares[index].style.backgroundColor = ''
+    nextSquares[index+1].classList.remove('tetramino')
+    nextSquares[index+1].style.backgroundColor = ''
   })
 }
 
@@ -115,6 +116,7 @@ function draw(){
   currentPiece.forEach(index =>{
     squares[currentPosition+index].classList.add('tetramino')
     squares[currentPosition+index].style.backgroundColor = colours[random]
+    squares[currentPosition+index].style.borderColor = colours[random]
   })
 }
 
@@ -226,7 +228,7 @@ function gameOver(){
   if(currentPiece.some( index => squares[currentPosition + index].classList.contains('taken'))){
     clearInterval(gameTimer)
     gameOverDisplay.style.display = "block"
-
+    document.removeEventListener('keydown', control)
     lost = true
     gameTimer = null
     return lost
@@ -281,7 +283,7 @@ function moveDown(){
       if(!freeze()) gameTimer = setInterval(moveDown,interval)
 
 
-    },interval*2) //times 2 for more 'natural' feel
+    },interval) //times 2 for more 'natural' feel - temp removed
     return
   }
   undraw()
@@ -378,15 +380,27 @@ function start(){
       for(i=0; i<height*width; i++){
         squares[i].classList.remove("taken")
         squares[i].classList.remove("tetramino")
+        squares[i].style.backgroundColor=''
+      }
+      for(i=0; i<width*4; i++){
+        nextSquares[i].classList.remove("taken")
+        nextSquares[i].classList.remove("tetramino")
+        nextSquares[i].style.backgroundColor=''
       }
       score = 0
       lost = false
       displaylastScored.innerHTML = 0
       displayScore.innerHTML = 0
       gameOverDisplay.style.display = "none"
+      nextRandom = Math.floor(Math.random()*tetraminoes.length)
+      random = nextRandom
+      nextPiece = tetraminoes[nextRandom][currentRotation]
+      assignNextPiece()
+      draw();
     }
     document.addEventListener('keydown', control)
-    draw();
+    // assignNextPiece()
+    // draw();
     gameTimer = setInterval(moveDown, interval)
     drawNextPiece()
   }

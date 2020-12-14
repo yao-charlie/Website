@@ -1,17 +1,52 @@
-.play__area{
-  display: grid;
-  grid-template-columns: 200px auto;
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
 }
-.play__area div{
+
+
+
+
+.score__title{
+  /* padding-top: .5em; */
+  padding-bottom: .5em;
+}
+
+.game__area{
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 1em;
+}
+
+
+.game__area *{
+
+margin-left: auto;
+margin-right: auto;
 
 }
+
+#game__over{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.play__area{
+  padding-top: 1em;
+  display: flex;
+  max-width: 400px;
+  grid-template-columns: 200px auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .grid {
   width: 200px;
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
+  background-color: var(--clr-dark);
 }
 
 
@@ -24,9 +59,15 @@
 
 
 .tetramino{
-  background-color: blue;
+  /* background-color: blue; */
+  border-radius: 5px;
+  border-style: outset;
+  border-color: white;
 }
 
+.tetramino div{
+
+}
 
 .nextTetra{
   width: 200px;
