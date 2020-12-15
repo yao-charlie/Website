@@ -41,6 +41,7 @@ Fonts
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #3274c9;
+  --clr-accent-light: #ffde3f;
 
 
   --fs-h1: 3rem;
@@ -72,6 +73,14 @@ Fonts
 section{
     padding: 3em 2em;
 }
+
+/* a:hover{
+  color: var(--clr-light);
+}
+
+a:visited{
+  color: var(--clr-accent-light);
+} */
 
 body {
   background: var(--clr-light);
@@ -145,7 +154,7 @@ sup {
 .lightBox__container{
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 10%;
   margin-right:10%;
 
@@ -872,7 +881,10 @@ Projects
 
 .projects_lightbox_content{
   padding: 1em;
+}
 
+.projects_lightbox_content a{
+  color: var(--clr-accent-light);
 }
 
 .projects__lightbox__copy{
@@ -885,7 +897,6 @@ Projects
 .projects__item:focus .projects__img{
   transform: scale(1.1);
   opacity: .15;
-
 }
 
 /*******

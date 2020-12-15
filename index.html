@@ -374,6 +374,13 @@
 						</div>
 					</div>
 
+					<div class = "projects__item" onclick="openLBox('projects__content__lightbox'); currentLBContent('projects__content__lightbox', 'projects__lightBox__container', 10)">
+						<div class = "projects_item_border">
+							<img src="img\th\tetris-th.jpg" alt="" class="projects__img">
+							<h1 class = projects__img__title> Tetris </h1>
+						</div>
+					</div>
+
 					<div id = 'projects__content__lightbox' class = lightBox onclick="closeLBox('projects__content__lightbox')">
 
 						<!-- Project item 1 -->
@@ -651,8 +658,52 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
+
+					<!-- Project item 10 -->
+					<div class = "projects__lightBox__container lightBox__container">
+						<div class = "lightBox__container__window">
+							<h2 class ="lightBox__container__title"> Tetris </h2>
+							<div class = "lightBox__container__content">
+								<div class = "lightBox__container__item">
+									<img src="img\tetris.jpg" alt="" class=" projects_lightbox_content" loading=lazy>
+								</div>
+								<div class = "lightBox__container__item projects_lightbox_content projects__lightbox__copy">
+									<p>
+									A fairly simple demonstration but we all have to start somewhere, right? Over the course of a weekend, the bulk majority of the core gameplay loop was coded. Over the next few days, various bugs were worked out, style was updated and website-integration was included.
+									</p>
+									<p>
+										The excercise was guided by various tutorials; however, there was additional added functionality, bug fixes and refactorization.	Of particular note were improved collision detection; fixed rotation bugs; additional code to reduce repetition; and, additional general functionality/features.
+									</p>
+									<p>
+										The excercise primarily was to acquire more Javascript specific experience, building off the modest amounts used in the creation of this website, to better understand inbuilt JS methods. As the goal was to understand such methods better, this path was taken vs. alternate methods of using matricies to represent tetraminos and the game board, and applying some simple linear algebra to rotate pieces.
+									</p>
+									<p>
+										While there is still additional functionality to be added, with the former in mind, I believe I've largely acheived my goal. Regardless, here are the additional features to be added (which, conveniently, serves as a disclaimer of the incomplete game):
+									</p>
+									<ul>
+										<li>Levels, i.e. increasing speed/gravity</li>
+										<li>Wall kicks</li>
+										<li>Minor position start bug fixes</li>
+										<li>Minor rotation bug fixes</li>
+										<li>Leaderboard</li>
+										<li>Block clear and possibly freeze animations</li>
+										<li>Revised scoring system which better aligns with World Tetris scoring system</li>
+										<li>General research into World Tetris systems to align game mechanics more closely</li>
+										<li>Improved accessibility with start-button limited to mouse interaction</li>
+										<li>Mobile functionality (and responsiveness), ideally with gesture controls. Swipe left/right to move; tap to rotate; tap+hold to drop?</li>
+										<li>General clean up, refactorization and commenting</li>
+									</ul>
+
+									<p>
+									They say a picture is worth a thousand words - there must be an analog for an interactive experience so <a href="./tetris.html">I invite you to interact.</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
 
 				</div>
 			</section>
